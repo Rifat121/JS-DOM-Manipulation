@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: url(bg.webp) no-repeat center/cover;
+    color: rgb(16, 17, 18);
+    overflow: hidden;
+}
+.title{
+    text-align: center;
+    border: 2px solid gray;
+    color: aliceblue;
+    margin: 20px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 40%;
+    margin-left: 30%;
+    background-color: rgba(250, 250, 255, 0.6);
+    outline: maroon solid 2px;
+    text-align: center;
+    font-weight: 100;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 2/-2;
+    font-size: 1.5rem;
+    margin: 20px;
+    transition: 500ms;
+}
+.toggle{
+    grid-column: -2/-1;
+    margin-left: 20px;
+    align-self: center;    
+    font-size: 1.6rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.toggle:hover{
+    transition: 100ms;
+    scale: 1.05;
+
+}
+.answer{
+    display: none;
+    grid-column: 2/-3;
+    font-size: 1.5rem;
+}
+
+/* Styling the boxes */
+
+.box-container{
+    display: flex;
+    gap: 2em;
+    height: 60vh;
+    flex: 1;
+    justify-content: space-between;
+    align-items: end;
+}
+.box-container > * {
+    padding: 1.5em;
+    border: 2px solid whitesmoke;
+    color: aliceblue;
+    margin: 1em;
+}
+
+.box{
+    overflow: hidden;
+    height: 15em;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.box-title{
+    font-size: 1.7em;
+    padding-top: 3em;
+}
+.box:hover .box-title{
+    font-size: 1.2em;
+    padding-top: 1em;
+    text-align: center;
+    transition: 600ms;
+}
+
+.box-description{
+    display: none;
+    padding: 2em 0.5em;
+    text-align: justify;
+    font-size: 0.3em;
+}
+
+.box:hover .box-description{
+    display: block;
+    font-size: 1em;
+    transition: 400ms;
+}
+@media(min-width: 800px){
+    .box-title{
+        font-size: 3em;
+    }
+    .box:hover .box-title{
+        font-size: 2em;
+    }
+    .box:hover .box-description{
+        font-size: 1.5em;
+    }
+
+}
